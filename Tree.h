@@ -16,6 +16,16 @@ public:
         // TODO: implement
         return 0;
     }
+
+    DataType getInfo(int indexOf) {
+        // TODO: implement
+        return 0;
+    }
+
+    int getRoot(int indexOf) {
+        // TODO: implement
+        return 0;
+    }
 };
 
 #endif
