@@ -36,12 +36,6 @@ std::string AdjacencyVectorGraph::toString() {
             result += std::format("{}", _adjacencyVector[curIdx][i]);
             result += (i == rowSize - 1) ? "" : ", ";
         }
-//        auto *cur = _head[curIdx];
-//        while (cur) {
-//            result += std::format("{}", cur->data);
-//            result += (cur->next == nullptr) ? "" : "->";
-//            cur = cur->next;
-//        }
         result += "];\n";
     }
     result += ")\n";
