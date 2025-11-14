@@ -41,3 +41,14 @@ std::string AdjacencyVectorGraph::toString() {
     result += ")\n";
     return result;
 }
+
+AdjacencyVectorGraph::~AdjacencyVectorGraph() {
+    if (_adjacencyVector != nullptr) {
+        for (int i = 0; i < _nodesCount; i++) {
+            delete[] _adjacencyVector[i];
+        }
+        delete[] _adjacencyVector;
+    }
+
+    delete[] _rowSizes;
+}
