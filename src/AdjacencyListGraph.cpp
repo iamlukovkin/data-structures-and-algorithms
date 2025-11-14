@@ -4,8 +4,8 @@ AdjacencyListGraph::AdjacencyListGraph(std::vector<std::vector<int>> adjMatrix) 
     _size = static_cast<int>(adjMatrix.size());
     _head.resize(_size, nullptr);
     for (int i = 0; i < _size; i++) {
-        Node<int>* currentHead = nullptr;
-        Node<int>* currentTail = nullptr;
+        Node<int> *currentHead = nullptr;
+        Node<int> *currentTail = nullptr;
         for (int j = 0; j < _size; j++) {
             if (adjMatrix[i][j] != 0) {
                 if (!currentHead) {
@@ -39,4 +39,8 @@ std::string AdjacencyListGraph::toString() {
     }
     result += ")\n";
     return result;
+}
+
+AdjacencyListGraph::~AdjacencyListGraph() {
+    for (auto ptr: _head) delete ptr;
 }

@@ -18,6 +18,6 @@ public:
 
     std::string toString() override;
 
-//    ~AdjacencyVectorGraph() override;
+    ~AdjacencyVectorGraph() override;
 };
 #endif

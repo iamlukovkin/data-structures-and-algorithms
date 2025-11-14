@@ -43,7 +43,7 @@ public:
 
     virtual RangeInterface *getNeighbours(int index) = 0;
 
-//    virtual ~AbstractGraph() = default;
+    virtual ~AbstractGraph() = default;
 };
 
 #endif

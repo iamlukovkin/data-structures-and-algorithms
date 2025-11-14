@@ -18,7 +18,7 @@ public:
 
     RangeInterface* getNeighbours(int index) override;
 
-//    ~AdjacencyListGraph() override;
+    ~AdjacencyListGraph() override;
 };
 
 #endif
