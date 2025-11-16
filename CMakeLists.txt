@@ -1,26 +1,11 @@
-cmake_minimum_required(VERSION 4.0)
-project(data_structures_and_algorithms)
+cmake_minimum_required(VERSION 3.10)
+project(data_structures_and_algorithms C)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_C_STANDART 11)
 
-add_executable(data_structures_and_algorithms main.cpp
-        include/AbstractGraph.h
-        include/AdjacencyVectorGraph.h
-        include/RangeInterface.h
-        include/GraphIterator.h
-        include/IteratorInterface.h
-        include/VectorRange.h
-        include/VectorIterator.h
-        include/AdjacencyListGraph.h
-        include/Node.h
-        include/ListRange.h
-        include/ListIterator.h
-        src/AbstractGraph.cpp
-        src/AdjacencyListGraph.cpp
-        src/AdjacencyVectorGraph.cpp
-        src/GraphIterator.cpp
-        src/ListIterator.cpp
-        src/ListRange.cpp
-        src/VectorIterator.cpp
-        src/VectorRange.cpp
+include_directories(${CMAKE_SOURCE_DIR}/include)
+
+add_executable(data_structures_and_algorithms 
+  src/main.c
+  src/graph/graph.c
 )
