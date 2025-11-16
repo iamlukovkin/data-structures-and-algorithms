@@ -4,17 +4,6 @@ project(data_structures_and_algorithms)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(data_structures_and_algorithms main.cpp
-        include/AbstractGraph.h
-        include/AdjacencyVectorGraph.h
-        include/RangeInterface.h
-        include/GraphIterator.h
-        include/IteratorInterface.h
-        include/VectorRange.h
-        include/VectorIterator.h
-        include/AdjacencyListGraph.h
-        include/Node.h
-        include/ListRange.h
-        include/ListIterator.h
         src/AbstractGraph.cpp
         src/AdjacencyListGraph.cpp
         src/AdjacencyVectorGraph.cpp
@@ -24,3 +13,5 @@ add_executable(data_structures_and_algorithms main.cpp
         src/VectorIterator.cpp
         src/VectorRange.cpp
 )
+
+target_include_directories(data_structures_and_algorithms PRIVATE include/)
